@@ -3,8 +3,7 @@ class Fridays
   def self.find(year)
     friday_the_thirteenths = []
     12.times.with_index do |i|
-      i += 1
-      current_day = Date.strptime("#{year}-#{i}-13", "%Y-%m-%d")
+      current_day = Date.strptime("#{year}-#{i + 1}-13", "%Y-%m-%d")
       if current_day.wday == 5
         friday_the_thirteenths << current_day
       end
